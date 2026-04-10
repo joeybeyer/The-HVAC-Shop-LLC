@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { BUSINESS, SERVICE_AREA_STRING } from '@/lib/constants';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -97,9 +99,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* TODO: Add GTM script when NEXT_PUBLIC_GTM_ID is set */}
       </head>
       <body className="font-sans antialiased">
-        {/* TODO: <Header /> */}
+        <Header />
         <main>{children}</main>
-        {/* TODO: <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
